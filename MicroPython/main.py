@@ -7,4 +7,9 @@ a sprite go around the perimeter.
 
 from microbit import *
 
-countY = number
+# Variables
+countY = number = 0
+countX = number = 0
+
+# Cleanup
+display.clear()
