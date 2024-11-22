@@ -28,8 +28,8 @@ while True:
         while countY == 0:
             display.clear()
             display.set_pixel(countX, countY, 9)
-            countX = countX + 1
             sleep(0.2)
+            countX = countX + 1
             # Move down to get out of loop.
             if countX == 4:
                 display.clear()
@@ -41,8 +41,8 @@ while True:
         while countX == 4:
             display.clear()
             display.set_pixel(countX, countY, 9)
-            countY = countY + 1
             sleep(0.2)
+            countY = countY + 1
             # Move left to get out of loop.
             if countY == 4:
                 display.clear()
@@ -54,11 +54,88 @@ while True:
         while countY == 4:
             display.clear()
             display.set_pixel(countX, countY, 9)
-            countX = countX + 1
             sleep(0.2)
+            countX = countX - 1
             # Move left to get out of loop.
             if countX == 0:
                 display.clear()
                 display.set_pixel(countX, countY, 9)
                 countY = countY - 1
                 sleep(0.2)
+        
+        # Move sprite to top left.
+        while countX == 0:
+            display.clear()
+            display.set_pixel(countX, countY, 9)
+            sleep(0.2)
+            countY = countY - 1
+            # Move left to get out of loop.
+            if countY == 0:
+                display.clear()
+                display.set_pixel(countX, countY, 9)
+                countX = countX + 1
+                sleep(0.2)
+        
+        display.clear()
+        display.show(Image.HAPPY)
+
+    # On B button pressed do loop clockwise.
+        if button_b.is_pressed():
+            display.clear
+            countX = 0
+            countY = 0
+
+            # Move sprite to bottom left.
+            while countX == 0:
+                display.clear()
+                display.set_pixel(countX, countY, 9)
+                sleep(0.2)
+                countY = countY + 1
+                # Move down to get out of loop.
+                if countY == 4:
+                    display.clear()
+                    display.set_pixel(countX, countY, 9)
+                    countX = countX + 1
+                    sleep(0.2)
+
+            # Move sprite to bottom right.
+            while countY == 4:
+                display.clear()
+                display.set_pixel(countX, countY, 9)
+                sleep(0.2)
+                countX = countX + 1
+                # Move left to get out of loop.
+                if countX == 4:
+                    display.clear()
+                    display.set_pixel(countX, countY, 9)
+                    countY = countY - 1
+                    sleep(0.2)
+
+            # Move sprite to top right.
+            while countX == 4:
+                display.clear()
+                display.set_pixel(countX, countY, 9)
+                sleep(0.2)
+                countY = countY - 1
+                # Move left to get out of loop.
+                if countY == 0:
+                    display.clear()
+                    display.set_pixel(countX, countY, 9)
+                    countX = countX - 1
+                    sleep(0.2)
+
+            # Move sprite to top left.
+            while countY == 0:
+                display.clear()
+                display.set_pixel(countX, countY, 9)
+                sleep(0.2)
+                countX = countX - 1
+                # Move left to get out of loop.
+                if countX == 0:
+                    display.clear()
+                    display.set_pixel(countX, countY, 9)
+                    countY = countY + 1
+                    sleep(0.2)
+
+            display.clear()
+            display.show(Image.HAPPY)
